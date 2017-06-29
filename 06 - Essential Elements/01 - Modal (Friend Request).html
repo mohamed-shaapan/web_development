@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+		<script>
+			function myFunction(){
+			//window.alert('success');
+			document.getElementById('id01').style.display='none';
+			}
+		</script>
+
+	</head>
+	
+	<body class="w3-container">
+
+		<h2>W3.CSS Modal</h2>
+
+		<button onclick="document.getElementById('id01').style.display='block'" class="w3-btn">Open Modal</button>
+
+		<div id="id01" class="w3-modal">
+			<div class="w3-modal-content w3-animate-zoom w3-card-12 w3-dark-grey w3-round-xlarge" style="width:400px; max-width:400px">
+				<div class="w3-container w3-center">
+				  <h3>Friend Request</h3>
+				  <img src="http://www.w3schools.com/w3css/img_avatar3.png" alt="Avatar" style="height: 300px;">
+				  <h5>John Doe</h5>
+
+				  <div class="w3-section">
+					<button class="w3-btn w3-green w3-ripple" onclick="setTimeout(myFunction, 400);" >Accept</button>
+					<button class="w3-btn w3-red w3-ripple" onclick="setTimeout(myFunction, 400);" >Decline</button>
+				  </div>
+				</div>
+			</div>
+		</div>
+				
+	</body>
+
+</html>
+

@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	</head>
+
+	<body class="w3-container">
+
+		<h2>Accordions</h2>
+		<p>An accordion is used to show (and hide) content that is broken into sections:</p>
+
+		<div class="w3-card-2" style="width:800px; min-width:800px">
+			<header class="w3-container w3-teal">
+				<h3>Header</h3>
+			</header>
+			
+			<div class="w3-accordion w3-light-grey">
+				<!--First Section-->
+				<button onclick="hideShowAccordion('Accordion01')" class="w3-btn-block w3-left-align w3-blue">Toggle Section 01</button>
+				<div id="Accordion01" class="w3-accordion-content w3-container w3-show">
+					<h4>Section 1</h4>
+					<p>Some text..</p>
+				</div>
+				<!--Second Section-->
+				<button onclick="hideShowAccordion('Accordion02')" class="w3-btn-block w3-left-align w3-blue">Toggle Section 02</button>
+				<div id="Accordion02" class="w3-accordion-content w3-container">
+					<h4>Section 2</h4>
+					<p>Some other text..</p>
+				</div>
+			</div>
+			
+			<footer class="w3-container w3-teal">
+				<h3>Footer</h3>
+			</footer>
+		</div>
+
+	</body>
+	
+	<script>
+		function hideShowAccordion(id) {
+			var x = document.getElementById(id);
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+	</script>	
+	
+</html>
+

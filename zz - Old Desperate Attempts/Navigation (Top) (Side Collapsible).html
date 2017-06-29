@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	</head>
+	
+	<body>
+		<!--Top Navigation Bar-->
+		<div class="w3-top">
+		  <ul class="w3-navbar w3-teal w3-large">
+			<li onclick="w3_handle_sidenav()"><a href="#"><i class="fa fa-home"></i></a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+		  </ul>
+		</div>
+		<!--Side Navigation Bar-->
+		<nav class="w3-sidenav w3-red w3-card-12 w3-animate-left" style="display:none; margin-top:43px" id="mySidenav">
+		  <a href="#">Link 1</a>
+		  <a href="#">Link 2</a>
+		  <a href="#">Link 3</a>
+		  <a href="#">Link 4</a>
+		  <a href="#">Link 5</a>
+		</nav>
+
+		<!--Page Content-->
+		<br><br>
+		<div class="w3-container">
+		  <h2>Fixed Top Navigation</h2>
+		  <h3>The w3-top class forces the navigation bar to stay at the top of the page, even when the user scrolls the page.</h3>
+		  <h3>Scroll this page to see the effect.</h3>
+		  <p>Some text to enable scrolling..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		  <p>Some text some text some text some text..</p>
+		</div>
+	</body>
+
+	<script>
+		function w3_handle_sidenav() {
+			var x = document.getElementById('mySidenav');
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+	</script>
+</html>
+

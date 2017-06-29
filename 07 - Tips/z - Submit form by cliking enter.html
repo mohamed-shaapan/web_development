@@ -1,0 +1,21 @@
+<html>
+
+	<body>
+		
+		<form action="gethint.php" method="post">
+			Enter Your Name<br>
+			<input type="text" placeholder="write your name here" />
+		</form>
+		
+	</body>
+	
+	<script>
+		$("input").keypress(function(event) {
+			if (event.which == 13) {
+				event.preventDefault();
+				$("form").submit();
+			}
+		});
+	</script>
+	
+</html>

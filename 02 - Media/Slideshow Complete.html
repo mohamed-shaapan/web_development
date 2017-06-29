@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	</head>
+	
+	<body class="w3-container w3-margin">
+			<div class="w3-content w3-display-container w3-card-4 w3-border" style="width:600px;padding:3px; padding-bottom:8px">
+				<!--Images-->
+				<img class="mySlides" src="http://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%; display:none">
+				<img class="mySlides" src="http://www.w3schools.com/w3css/img_fjords.jpg" style="width:100%; display:none">
+				<img class="mySlides" src="http://www.w3schools.com/w3css/img_lights.jpg" style="width:100%; display:none">
+				
+				<div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
+					<!--Controls-->
+					<div class="w3-left w3-btn-floating w3-hover-text-khaki w3-transparent" onclick="plusDivs(-1)" style="margin-left:10px">&#10094;</div>
+					<div class="w3-right w3-btn-floating w3-hover-text-khaki w3-transparent" onclick="plusDivs(1)" style="margin-right:13px">&#10095;</div>
+					<!--Indicators-->
+					<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)" style="cursor:pointer;height:13px;width:13px;padding:0"></span>
+					<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)" style="cursor:pointer;height:13px;width:13px;padding:0"></span>
+					<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)" style="cursor:pointer;height:13px;width:13px;padding:0"></span>
+				</div>
+			</div>
+	</body>
+
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+		function currentDiv(n) {
+			showDivs(slideIndex = n);
+		}
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			if (n > x.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = x.length}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" w3-white", "");
+			}
+			x[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " w3-white";
+		}
+	</script>
+</html>
+
